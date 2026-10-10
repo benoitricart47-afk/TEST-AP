@@ -1,0 +1,26 @@
+# Construit l'application Windows (Calculatrice.exe) à chaque push.
+# Le résultat se télécharge dans l'onglet "Actions" du dépôt GitHub.
+name: Application Windows
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - run: npm run build:windows
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Calculatrice-Windows
+          path: dist/Calculatrice-win32-x64
