@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculatrice</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculatrice">
+    <!-- Écran : l'opération en cours au-dessus, le nombre affiché en dessous -->
+    <div class="ecran">
+      <div class="operation" id="operation"></div>
+      <div class="resultat" id="resultat">0</div>
+    </div>
+
+    <!-- Clavier : data-action pour les commandes, data-chiffre pour les nombres -->
+    <div class="clavier">
+      <button data-action="effacer" class="fonction">C</button>
+      <button data-action="retour" class="fonction">⌫</button>
+      <button data-action="pourcent" class="fonction">%</button>
+      <button data-operateur="/" class="operateur">÷</button>
+
+      <button data-chiffre="7">7</button>
+      <button data-chiffre="8">8</button>
+      <button data-chiffre="9">9</button>
+      <button data-operateur="*" class="operateur">×</button>
+
+      <button data-chiffre="4">4</button>
+      <button data-chiffre="5">5</button>
+      <button data-chiffre="6">6</button>
+      <button data-operateur="-" class="operateur">−</button>
+
+      <button data-chiffre="1">1</button>
+      <button data-chiffre="2">2</button>
+      <button data-chiffre="3">3</button>
+      <button data-operateur="+" class="operateur">+</button>
+
+      <button data-chiffre="0" class="large">0</button>
+      <button data-action="virgule">,</button>
+      <button data-action="egal" class="egal">=</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

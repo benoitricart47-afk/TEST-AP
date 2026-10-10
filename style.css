@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e1f26;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.calculatrice {
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  padding: 20px;
+  border-radius: 24px;
+  background: #2b2d38;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.ecran {
+  padding: 16px 8px 24px;
+  text-align: right;
+  color: #fff;
+  overflow: hidden;
+}
+
+.operation {
+  min-height: 1.4em;
+  font-size: 1rem;
+  color: #9a9cab;
+}
+
+.resultat {
+  font-size: 2.8rem;
+  font-weight: 300;
+  word-break: break-all;
+}
+
+.clavier {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  height: 64px;
+  border: none;
+  border-radius: 16px;
+  background: #3a3d4b;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.05s;
+}
+
+button:hover {
+  background: #474a5a;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.fonction {
+  background: #5a5d6e;
+}
+
+.operateur {
+  background: #f39c12;
+}
+
+.operateur:hover {
+  background: #f5ab35;
+}
+
+.egal {
+  background: #27ae60;
+}
+
+.egal:hover {
+  background: #2ecc71;
+}
+
+.large {
+  grid-column: span 2;
+}
